@@ -52,13 +52,21 @@ def show_madlib_form():
 
 @app.route('/madlib')
 def show_madlib():
+    nouns = [None]*4
+
     color = request.args.get("color")
-    noun = request.args.get("noun")
+    words = request.args.getlist("noun")
+
+    index = 0
+    for word in words:
+        nouns[index] = word
+        index += 1
+
     adjective = request.args.get("adjective")
     person = request.args.get("person")
-
-    return render_template("madlib.html", color=color, noun=noun,
-                           adjective=adjective, person=person)
+    return render_template("madlib.html", color=color, noun1=nouns[0],
+                           adjective=adjective, person=person, noun2= nouns[1],
+                           noun3=nouns[2], noun4=nouns[3])
 
 
 
