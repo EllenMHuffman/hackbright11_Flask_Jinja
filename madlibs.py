@@ -62,10 +62,12 @@ def show_madlib():
         nouns[index] = word
         index += 1
 
+    madlib_list = ['madlib.html', 'madlib1.html', 'madlib2.html']
+    random_madlib = choice(madlib_list)
     adjective = request.args.get("adjective")
     person = request.args.get("person")
-    return render_template("madlib.html", color=color, noun1=nouns[0],
-                           adjective=adjective, person=person, noun2= nouns[1],
+    return render_template(random_madlib, color=color, noun1=nouns[0],
+                           adjective=adjective, person=person, noun2=nouns[1],
                            noun3=nouns[2], noun4=nouns[3])
 
 

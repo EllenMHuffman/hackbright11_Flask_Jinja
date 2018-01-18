@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Madlib{% endblock %}
+
+{% block heading %}Enjoy your madlib!{% endblock %}
+
+{% block content %}
+
+{{ color }} {{ noun1 }}
+ {{ person }}
+  {{ adjective }}{{ noun2 }} {{ noun3 }}
+
+
+  {% if noun4 %}
+    {{ noun4 }}!!
+  {% endif %}
+
+{% endblock %}

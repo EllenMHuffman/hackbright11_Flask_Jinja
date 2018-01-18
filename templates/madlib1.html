@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Madlib{% endblock %}
+
+{% block heading %}Enjoy your madlib!{% endblock %}
+
+{% block content %}
+ Down the {{ noun1 }}, there was an enormous {{ noun2 }}. I looked over to my friend {{ person }}, and said, "{{ person }}!! Look at that!" Their face turned {{ color }} and they let out a {{ adjective }} shout. They said back to me, "We have to show that to {{ noun3}}, and maybe also {% if noun4 %}
+    {{ noun4 }}!!
+  {% endif %}."
+
+{% endblock %}

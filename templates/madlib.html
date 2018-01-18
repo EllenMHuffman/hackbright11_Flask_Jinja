@@ -1,7 +1,18 @@
-There once was a {{ color }} {{ noun1 }} sitting in the Hackbright Lab.
-When {{ person }} went to pick it up, it burst into flames in a totally
-{{ adjective }} way. A {{ noun2 }} and a {{ noun3 }} burst into flames too.
+{% extends 'base.html' %}
 
-{% if noun4 %}
+
+{% block title %}Madlib{% endblock %}
+
+{% block heading %}Enjoy your madlib!{% endblock %}
+
+{% block content %}
+
+  There once was a {{ color }} {{ noun1 }} sitting in the Hackbright Lab.
+  When {{ person }} went to pick it up, it burst into flames in a totally
+  {{ adjective }} way. A {{ noun2 }} and a {{ noun3 }} burst into flames too.
+
+  {% if noun4 %}
     {{ noun4 }}!!
-{% endif %}
+  {% endif %}
+
+{% endblock %}

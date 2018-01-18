@@ -1,0 +1,18 @@
+h1 {
+    font-family: Arial;
+    color: orange;
+    background-color: gray;
+
+}
+
+body {
+    font-family: Verdana;
+    font-style: italic;
+    color: blue;
+}
+
+form {
+    font-weight: bold;
+    background-color: yellow;
+
+}
