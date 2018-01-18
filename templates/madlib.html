@@ -1,18 +1,26 @@
 {% extends 'base.html' %}
 
-
 {% block title %}Madlib{% endblock %}
 
 {% block heading %}Enjoy your madlib!{% endblock %}
 
 {% block content %}
 
-  There once was a {{ color }} {{ noun1 }} sitting in the Hackbright Lab.
+  There once was a {{ color }} {{ nouns[0] }} sitting in the Hackbright Lab.
   When {{ person }} went to pick it up, it burst into flames in a totally
-  {{ adjective }} way. A {{ noun2 }} and a {{ noun3 }} burst into flames too.
+  {{ adjective }} way.
 
-  {% if noun4 %}
-    {{ noun4 }}!!
+  {% if 4 > nouns|length >= 2 %}
+    A {{ nouns[1] }}
+
+      {% if 4 > nouns|length >= 3 %} and a {{ nouns[2] }} {% endif %}
+
+    burst into flames too.
+
+  {% endif %}
+
+  {% if nouns|length == 4 %}
+    {{ nouns[3] }}!!
   {% endif %}
 
 {% endblock %}
